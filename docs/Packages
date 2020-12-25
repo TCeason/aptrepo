@@ -1,0 +1,86 @@
+Package: clickhouse-client
+Source: clickhouse
+Version: 19.17.6
+Architecture: all
+Maintainer: Alexey Milovidov <milovidov@yandex-team.ru>
+Installed-Size: 133
+Depends: clickhouse-common-static (= 19.17.6)
+Conflicts: clickhouse-compressor
+Replaces: clickhouse-compressor
+Filename: ./clickhouse-client_19.17.6_all.deb
+Size: 107236
+MD5sum: 8e4593ce383cffa936f1bf00c5fbc804
+SHA1: 9bb2ae7024bd356e6defe8d83f97d4d25b83399a
+SHA256: b4dd940d55d741ddf377323900ffb8096b42e3d58d126e300aee5252b0c3984a
+Section: database
+Priority: optional
+Description: Client binary for ClickHouse
+ Yandex ClickHouse is a column-oriented database management system
+ that allows generating analytical data reports in real time.
+ .
+ This package provides clickhouse-client , clickhouse-local and clickhouse-benchmark
+
+Package: clickhouse-common-static
+Source: clickhouse
+Version: 19.17.6
+Architecture: amd64
+Maintainer: Alexey Milovidov <milovidov@yandex-team.ru>
+Installed-Size: 201898
+Depends: tzdata
+Suggests: clickhouse-common-static-dbg
+Replaces: clickhouse-common, clickhouse-server-base
+Provides: clickhouse-common, clickhouse-server-base
+Filename: ./clickhouse-common-static_19.17.6_amd64.deb
+Size: 52994308
+MD5sum: a8a01ed5f9f53a7876d95bb4c2ea1583
+SHA1: 56426dfb2d697f2b748da6c25c44840b46314eb8
+SHA256: 6f21d4cd207ec08a33f38665366f763164c2fbdb40c9b50a976a1bc5c38f2245
+Section: database
+Priority: optional
+Description: Common files for ClickHouse
+ Yandex ClickHouse is a column-oriented database management system
+ that allows generating analytical data reports in real time.
+ .
+ This package provides common files for both clickhouse server and client
+
+Package: clickhouse-common-static-dbg
+Source: clickhouse
+Version: 19.17.6
+Architecture: amd64
+Maintainer: Alexey Milovidov <milovidov@yandex-team.ru>
+Installed-Size: 3218039
+Conflicts: clickhouse-common-dbg
+Replaces: clickhouse-common-dbg
+Filename: ./clickhouse-common-static-dbg_19.17.6_amd64.deb
+Size: 904513064
+MD5sum: 52e06719c5707f078ad4b12a6fe415fe
+SHA1: 68ce4a64f6ddda65eaeaa9941531f9af59f63ae8
+SHA256: 7e03a2fdcdc74f8b4abddad5912cb7d892d87fa21ae0beebf2aac55d7a06b55b
+Section: debug
+Priority: optional
+Description: debugging symbols for clickhouse-common-static
+ This package contains the debugging symbols for clickhouse-common.
+
+Package: clickhouse-server
+Source: clickhouse
+Version: 19.17.6
+Architecture: all
+Maintainer: Alexey Milovidov <milovidov@yandex-team.ru>
+Installed-Size: 188
+Depends: debconf (>= 0.5) | debconf-2.0, clickhouse-common-static (= 19.17.6), adduser
+Recommends: libcap2-bin
+Replaces: clickhouse-server-base, clickhouse-server-common
+Provides: clickhouse-server-common
+Filename: ./clickhouse-server_19.17.6_all.deb
+Size: 122036
+MD5sum: 833eaa13c541f4037c4d58fc9259bcf3
+SHA1: ea76cdf087caffbe8a25627ca63dfe1939d83af8
+SHA256: 59800809cbd95072d4eda30bdb539f8c84bae104aec5eca7e55ebe255ab55677
+Section: database
+Priority: optional
+Description: Server binary for ClickHouse
+ Yandex ClickHouse is a column-oriented database management system
+ that allows generating analytical data reports in real time.
+ .
+ This package provides clickhouse common configuration files
+
